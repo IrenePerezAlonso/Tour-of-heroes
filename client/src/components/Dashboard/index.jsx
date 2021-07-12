@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { loadHeroes } from '../../redux/actions/actionCreator';
@@ -11,6 +12,9 @@ function Dashboard({ heroes, dispatch }) {
   return (
     <>
       <h2>Top Heroes</h2>
+      <div className="heroes-menu">
+        {heroes.slice(1, 5).map((hero) => <Link to={`/detail/${hero.id}`}>{hero.name}</Link>)}
+      </div>
     </>
   );
 }
