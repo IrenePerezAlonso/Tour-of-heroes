@@ -3,7 +3,7 @@ import actionTypes from './actionTypes';
 
 const url = 'http://localhost:2021/heroes';
 
-export default function loadHeroes() {
+export function loadHeroes() {
   return async (dispatch) => {
     try {
       const { data } = await axios(url);
@@ -16,5 +16,15 @@ export default function loadHeroes() {
         type: actionTypes.LOAD_HEROES_ERROR
       });
     }
+  };
+}
+
+export function addHero(hero) {
+  return async (dispatch) => {
+    const { data } = await axios.post(url, hero);
+    dispatch({
+      type: actionTypes.ADD_HERO,
+      hero: data
+    });
   };
 }
