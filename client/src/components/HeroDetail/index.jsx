@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { useHistory, useParams } from 'react-router-dom';
+import './heroDetail.css';
 import PropTypes from 'prop-types';
 import { getHeroById, updateHero } from '../../redux/actions/actionCreator';
 
