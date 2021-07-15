@@ -5,6 +5,10 @@ import { PropTypes } from 'prop-types';
 function HeroList({ heroes, dispatch }) {
   const [nameHero, setNameHero] = useState();
 
+  function getName(event) {
+    setNameHero(event.target.value);
+  }
+
   return (
     <>
       <h2>My Heroes</h2>
