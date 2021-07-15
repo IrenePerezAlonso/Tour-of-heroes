@@ -10,6 +10,10 @@ function HeroList({ heroes, dispatch }) {
     setNameHero(event.target.value);
   }
 
+  function handleName() {
+    dispatch(addHero({ name: nameHero }));
+  }
+
   return (
     <>
       <h2>My Heroes</h2>
