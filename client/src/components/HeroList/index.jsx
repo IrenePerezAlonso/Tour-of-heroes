@@ -5,6 +5,12 @@ function HeroList({ heroes, dispatch }) {
   return (
     <>
       <h2>My Heroes</h2>
+      <div>
+        <label htmlFor="new-hero">
+          Hero name:
+          <input id="new-hero" />
+        </label>
+      </div>
     </>
   );
 }
