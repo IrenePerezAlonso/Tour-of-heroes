@@ -35,7 +35,7 @@ function HeroList({ heroes, dispatch }) {
             <span className="badge">{hero.id}</span>
             {' '}
             {hero.name}
-            <button type="button" className="delete" title="delete hero">x</button>
+            <button type="button" className="delete" title="delete hero" onClick={() => deleteHeroes(hero.id)}>x</button>
           </li>
         ))}
       </ul>
