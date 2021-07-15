@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 function HeroList({ heroes, dispatch }) {
@@ -37,3 +38,5 @@ function mapStateToProps({ heroes }) {
     heroes
   };
 }
+
+export default connect(mapStateToProps)(HeroList);
