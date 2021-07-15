@@ -13,7 +13,7 @@ function HeroList({ heroes, dispatch }) {
         </label>
       </div>
 
-      <ul>
+      <ul className="heroes">
         {heroes.map((hero) => (
           <li>
             <span>{hero.id}</span>
