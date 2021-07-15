@@ -14,6 +14,10 @@ function HeroList({ heroes, dispatch }) {
     dispatch(addHero({ name: nameHero }));
   }
 
+  function deleteHeroes(id) {
+    dispatch(deleteHero(id));
+  }
+
   return (
     <>
       <h2>My Heroes</h2>
