@@ -19,6 +19,7 @@ function HeroList({ heroes, dispatch }) {
             <span className="badge">{hero.id}</span>
             {' '}
             {hero.name}
+            <button type="button">x</button>
           </li>
         ))}
       </ul>
