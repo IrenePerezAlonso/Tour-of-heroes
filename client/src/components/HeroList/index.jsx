@@ -31,3 +31,9 @@ HeroList.propTypes = {
   heroes: PropTypes.shape([]).isRequired,
   dispatch: PropTypes.func.isRequired
 };
+
+function mapStateToProps({ heroes }) {
+  return {
+    heroes
+  };
+}
