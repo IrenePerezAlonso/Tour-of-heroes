@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import { addHero } from '../../redux/actions/actionCreator';
+import { addHero, deleteHero } from '../../redux/actions/actionCreator';
 
 function HeroList({ heroes, dispatch }) {
   const [nameHero, setNameHero] = useState();
