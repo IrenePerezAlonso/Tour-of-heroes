@@ -15,7 +15,7 @@ function HeroList({ heroes, dispatch }) {
       <div>
         <label htmlFor="new-hero">
           Hero name:
-          <input id="new-hero" />
+          <input id="new-hero" onChange={getName} />
           <button type="button" className="add-button">Add hero</button>
         </label>
       </div>
