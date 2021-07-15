@@ -4,6 +4,10 @@ import { PropTypes } from 'prop-types';
 import { addHero, deleteHero, loadHeroes } from '../../redux/actions/actionCreator';
 
 function HeroList({ heroes, dispatch }) {
+  useEffect(() => {
+    if (!heroes.length) dispatch(loadHeroes());
+  }, []);
+
   const [nameHero, setNameHero] = useState();
 
   function getName(event) {
