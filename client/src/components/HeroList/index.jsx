@@ -33,13 +33,14 @@ function HeroList({ heroes, dispatch }) {
           <button type="button" className="add-button" onClick={handleName}>Add hero</button>
         </label>
       </div>
-
       <ul className="heroes">
         {heroes.map((hero) => (
           <li>
-            <span className="badge">{hero.id}</span>
-            {' '}
-            {hero.name}
+            <Link to={`/detail/${hero.id}`}>
+              <span className="badge">{hero.id}</span>
+              {' '}
+              {hero.name}
+            </Link>
             <button type="button" className="delete" title="delete hero" onClick={() => deleteHeroes(hero.id)}>x</button>
           </li>
         ))}
